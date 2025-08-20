@@ -1,0 +1,140 @@
+
+        /* Section styling */
+        .section--hero-min {
+          padding: 50px 20px;
+          text-align: center;
+        }
+
+        .page__title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .section__subtitle {
+          font-size: 1.2rem;
+          color: #555;
+          margin-bottom: 25px;
+        }
+
+        /* Pills grid with 2 rows: 4 + 5 */
+        .grid--pills {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr); /* 5 columns */
+          gap: 12px;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        /* First 4 pills should take first row */
+        .pill:nth-child(-n + 4) {
+          grid-column: span 1;
+        }
+
+        /* Force line break after 4th pill */
+        .pill:nth-child(5) {
+          grid-column: 1;
+        }
+
+        /* Pills style */
+        .pill {
+          padding: 10px 20px;
+          border-radius: 25px;
+          background: linear-gradient(135deg, #b0b0b0, #e0e0e0);
+          color: #222;
+          font-size: 0.95rem;
+          font-weight: 500;
+          cursor: pointer;
+          text-align: center;
+          transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .pill:hover {
+          background: linear-gradient(135deg, #a0a0a0, #cfcfcf);
+          transform: translateY(-2px);
+        }
+    
+        .section_card {
+          background: linear-gradient(135deg, #b0b0b0, #e0e0e0);
+          width: 72vw;
+          margin: auto;
+          padding: 80px;
+
+          border-radius: 41px;
+        }
+        .card-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 40px;
+          max-width: 1000px;
+          margin: auto;
+        }
+
+        .card {
+          background: #fff;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-direction: column;
+          transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+          transform: translateY(-5px);
+        }
+
+        .card img {
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+        }
+
+        .card-content {
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          flex: 1;
+        }
+
+        .card-meta {
+          display: flex;
+          justify-content: space-between;
+          font-size: 12px;
+          color: #666;
+        }
+
+        .card-meta span:first-child {
+          background: #f0f0f0;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 11px;
+        }
+
+        .card h3 {
+          font-size: 18px;
+          margin: 0;
+          color: #111;
+        }
+
+        .card p {
+          font-size: 14px;
+          color: #555;
+          line-height: 1.4;
+          flex: 1;
+        }
+
+        .card a {
+          text-decoration: none;
+          color: #2563eb;
+          font-weight: bold;
+          font-size: 14px;
+          margin-top: auto;
+        }
+
+        .card a:hover {
+          text-decoration: underline;
+        }
+      

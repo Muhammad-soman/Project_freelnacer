@@ -77,11 +77,29 @@ p {
   margin-bottom: 18px;
 }
 .section__lead {
-  color: var(--muted);
-  font-size: 16px;
+  color: black;
+  font-size: 19px;
 }
 
 /* Layout helpers */
+.container-who{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.container-offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 .container {
   width: 100%;
   max-width: 1150px;
@@ -95,6 +113,8 @@ p {
 .section--hero-min {
   padding: 48px 0 24px;
 }
+
+
 
 /* Top Navbar */
 .top-navbar {
@@ -138,6 +158,11 @@ p {
   background: var(--bg);
   border-bottom: 1px solid var(--line);
   z-index: 20;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
 }
 .header__inner {
   display: flex;
@@ -206,58 +231,180 @@ p {
 /* Hero */
 .hero {
   padding: 50px 0 24px;
+  background-image: url(../assets/title\ hero.png);
+  min-height: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.hero__inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 36px;
-  align-items: center;
-}
+
 .hero__brand {
   font-size: 18px;
-  color: #0f3f45;
+  color: #c5cdce;
   font-weight: 800;
   margin-bottom: 10px;
 }
 .hero__title {
-  font-size: 36px;
+  font-size: 56px;
+  color: white;
 }
 .hero__subtitle {
-  color: #3a4349;
+    color: white;
+
   margin-top: 6px;
 }
 .hero__desc {
   margin-top: 10px;
+  color: white;
+
 }
 .hero__actions {
   display: flex;
   gap: 12px;
   margin: 16px 0 12px;
 }
-.hero__badges {
+
+
+/* css for section-who */
+.tagline{
   display: flex;
-  gap: 10px;
-  margin-top: 6px;
+  flex-direction: column;
+  align-items: center;
 }
-.badge {
-  font-size: 12px;
-  padding: 6px 10px;
-  border: 1px dashed #c7d4d7;
-  color: #0f3f45;
-  border-radius: 999px;
-  background: #f2f7f8;
+.section__eyebrow{
+  font-size: 100px;
+  color: rgb(13, 13, 119);
 }
-.hero__media {
+.section__title{
+  color: rgb(13, 13, 119);
+  font-size: 60px;
+}
+
+/* css for offer section */
+
+/* Offer Section */
+.section--offer {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0746b8;
+  margin-bottom: 10px;
+}
+
+.section__subtitle {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Rows */
+.offer__row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.offer__row--bottom {
+  max-width: 750px;
+  margin: 0 auto 40px;
+}
+
+/* Card */
+.offer__card {
+  flex: 1;
+  min-width: 260px;
+  max-width: 300px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #fff;
+  position: relative;
+  text-align: left;
 }
-.hero__img {
+
+.offer__card img {
   width: 100%;
-  height: 100%;
+  height: 180px;
   object-fit: cover;
-  min-height: 320px;
+  display: block;
 }
+
+.offer__content {
+  background: linear-gradient(180deg, rgba(7,70,184,0.9) 0%, rgba(7,70,184,0.95) 100%);
+  color: #fff;
+  padding: 16px;
+}
+
+.offer__content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.offer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offer__list li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 14px;
+}
+
+.offer__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* CTA */
+.offer__cta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn--outline {
+  border: 2px solid #0746b8;
+  color: #0746b8;
+  background: #fff;
+}
+
+.btn--outline:hover {
+  background: #0746b8;
+  color: #fff;
+}
+
+.btn--black {
+  background: #000;
+  color: #fff;
+}
+
+.btn--black:hover {
+  background: #333;
+}
+
+
 
 /* Offer columns */
 .offer__cols {

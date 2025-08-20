@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>All Blogs — EXKO INC</title>
+    <meta name="description" content="Explore blog categories and articles." />
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body class="page page--blog">
+    <!-- Top Navbar -->
+    <div class="top-navbar">
+      <div class="contact-info">
+        <a href="mailto:info@exa.com"
+          ><i class="fas fa-envelope"></i> info@exa.com</a
+        >
+        <a href="tel:6478090241"><i class="fas fa-phone"></i> 647-809-0241</a>
+      </div>
+    </div>
+
+    <header class="header" style="margin-top: 34px">
+      <div class="container header__inner">
+        <div class="brand">EXKO INC</div>
+        <nav class="nav" aria-label="Main navigation">
+          <button
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="navMenu"
+            aria-label="Open menu"
+          >
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+            <span class="nav__toggle-line"></span>
+          </button>
+          <ul id="navMenu" class="nav__list">
+            <li><a class="nav__link" href="index.html">Home</a></li>
+            <li>
+              <a class="nav__link nav__link--active" href="about.html"
+                >About Us</a
+              >
+            </li>
+            <li><a class="nav__link" href="service.html">Services</a></li>
+            <li><a class="nav__link" href="product.html">Products</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section section--hero-min">
+        <div class="container">
+          <h1 class="page__title">All Blogs</h1>
+          <p class="section__subtitle">Explore by Categories</p>
+
+          <!-- Categories as pills -->
+          <div class="grid grid--pills">
+            <div class="pill">DTF Print</div>
+            <div class="pill">Product Insights</div>
+            <div class="pill">Gloves</div>
+            <div class="pill">Safety Kits</div>
+            <div class="pill">Supply Chain</div>
+            <div class="pill">Sports</div>
+            <div class="pill">Screen Print</div>
+            <div class="pill">Bags</div>
+            <div class="pill">Custom Apparel</div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        /* Section styling */
+        .section--hero-min {
+          padding: 50px 20px;
+          text-align: center;
+        }
+
+        .page__title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .section__subtitle {
+          font-size: 1.2rem;
+          color: #555;
+          margin-bottom: 25px;
+        }
+
+        /* Pills grid with 2 rows: 4 + 5 */
+        .grid--pills {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr); /* 5 columns */
+          gap: 12px;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+
+        /* First 4 pills should take first row */
+        .pill:nth-child(-n + 4) {
+          grid-column: span 1;
+        }
+
+        /* Force line break after 4th pill */
+        .pill:nth-child(5) {
+          grid-column: 1;
+        }
+
+        /* Pills style */
+        .pill {
+          padding: 10px 20px;
+          border-radius: 25px;
+          background: linear-gradient(135deg, #b0b0b0, #e0e0e0);
+          color: #222;
+          font-size: 0.95rem;
+          font-weight: 500;
+          cursor: pointer;
+          text-align: center;
+          transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .pill:hover {
+          background: linear-gradient(135deg, #a0a0a0, #cfcfcf);
+          transform: translateY(-2px);
+        }
+      </style>
+
+      <!-- Blog cards reflecting your titles and short copy -->
+      <section class="section_card">
+        <div class="card-grid">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="../assets/1.jpg" alt="Card Image" />
+            <div class="card-content">
+              <div class="card-meta">
+                <span>Product Insights</span>
+                <span>May 17, 2025</span>
+              </div>
+              <h3>Behind the Seams: How We Engineer Our Core Styles</h3>
+              <p>
+                A deep dive into how Ekko designs product foundations—focusing
+                on construction, fit accuracy, material testing, and user intent
+                behind each product line.
+              </p>
+              <a href="#">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="../assets/2.avif" alt="Card Image" />
+            <div class="card-content">
+              <div class="card-meta">
+                <span>Process & Quality</span>
+                <span>June 07, 2025</span>
+              </div>
+              <h3>
+                How We Support Brands at Every Stage—from Samples to Scale
+              </h3>
+              <p>
+                Explains your flexibility—from low minimums to full-scale
+                production; includes case studies of a new brand and a growing
+                one.
+              </p>
+              <a href="#">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="../assets/1.jpg" alt="Card Image" />
+            <div class="card-content">
+              <div class="card-meta">
+                <span>Product Insights</span>
+                <span>Aug 25, 2025</span>
+              </div>
+              <h3>
+                Why Fabric Choice Matters: Cotton, Poly, and Everything In
+                Between
+              </h3>
+              <p>
+                Educates B2B buyers on how to choose the ideal fabric based on
+                use case, climate, wearability, and branding goals.
+              </p>
+              <a href="#">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <img src="../assets/4.jpeg" alt="Card Image" />
+            <div class="card-content">
+              <div class="card-meta">
+                <span>Design Process</span>
+                <span>Sep 10, 2025</span>
+              </div>
+              <h3>Inside Our Creative Studio: Turning Ideas Into Products</h3>
+              <p>
+                A look at our design thinking process, from mood boards and
+                sketches to final product development and testing.
+              </p>
+              <a href="#">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card">
+            <img src="../assets/5.jpeg" alt="Card Image" />
+            <div class="card-content">
+              <div class="card-meta">
+                <span>Sustainability</span>
+                <span>Oct 02, 2025</span>
+              </div>
+              <h3>Building a Greener Supply Chain</h3>
+              <p>
+                How we’re working with partners and suppliers to reduce carbon
+                emissions, recycle materials, and ensure ethical sourcing.
+              </p>
+              <a href="#">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card">
+            <img src="../assets/6.avif" alt="Card Image" />
+            <div class="card-content">
+              <div class="card-meta">
+                <span>Customer Stories</span>
+                <span>Nov 12, 2025</span>
+              </div>
+              <h3>How Brands Are Using Ekko to Scale Globally</h3>
+              <p>
+                Case studies highlighting how customers have grown their
+                businesses by leveraging Ekko’s production and design expertise.
+              </p>
+              <a href="#">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <img src="../assets/7.avif" alt="Card Image" />
+            <div class="card-content">
+              <div class="card-meta">
+                <span>Design Process</span>
+                <span>Sep 10, 2025</span>
+              </div>
+              <h3>Inside Our Creative Studio: Turning Ideas Into Products</h3>
+              <p>
+                A look at our design thinking process, from mood boards and
+                sketches to final product development and testing.
+              </p>
+              <a href="#">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card">
+            <img src="../assets/8.avif" alt="Card Image" />
+            <div class="card-content">
+              <div class="card-meta">
+                <span>Sustainability</span>
+                <span>Oct 02, 2025</span>
+              </div>
+              <h3>Building a Greener Supply Chain</h3>
+              <p>
+                How we’re working with partners and suppliers to reduce carbon
+                emissions, recycle materials, and ensure ethical sourcing.
+              </p>
+              <a href="#">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card">
+            <img src="../assets/9.jpeg" alt="Card Image" />
+            <div class="card-content">
+              <div class="card-meta">
+                <span>Customer Stories</span>
+                <span>Nov 12, 2025</span>
+              </div>
+              <h3>How Brands Are Using Ekko to Scale Globally</h3>
+              <p>
+                Case studies highlighting how customers have grown their
+                businesses by leveraging Ekko’s production and design expertise.
+              </p>
+              <a href="#">Learn More →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>
+        .section_card {
+          background: linear-gradient(135deg, #b0b0b0, #e0e0e0);
+          width: 72vw;
+          margin: auto;
+          padding: 80px;
+
+          border-radius: 41px;
+        }
+        .card-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 40px;
+          max-width: 1000px;
+          margin: auto;
+        }
+
+        .card {
+          background: #fff;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          display: flex;
+          flex-direction: column;
+          transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+          transform: translateY(-5px);
+        }
+
+        .card img {
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+        }
+
+        .card-content {
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          flex: 1;
+        }
+
+        .card-meta {
+          display: flex;
+          justify-content: space-between;
+          font-size: 12px;
+          color: #666;
+        }
+
+        .card-meta span:first-child {
+          background: #f0f0f0;
+          padding: 4px 8px;
+          border-radius: 6px;
+          font-size: 11px;
+        }
+
+        .card h3 {
+          font-size: 18px;
+          margin: 0;
+          color: #111;
+        }
+
+        .card p {
+          font-size: 14px;
+          color: #555;
+          line-height: 1.4;
+          flex: 1;
+        }
+
+        .card a {
+          text-decoration: none;
+          color: #2563eb;
+          font-weight: bold;
+          font-size: 14px;
+          margin-top: auto;
+        }
+
+        .card a:hover {
+          text-decoration: underline;
+        }
+      </style>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Ekko</h3>
+          <p>
+            At Ekko, we specialize in high-quality gloves, safety gear kits,
+            sportswear, and bags designed for professionals who prioritize
+            protection, durability, and comfort.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Gloves</a></li>
+            <li><a href="#">Bags</a></li>
+            <li><a href="#">Safety Kits</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 45 Gill Cove, Cambridge, ON,
+            N3E 1A1, CANADA
+          </p>
+          <p><i class="fas fa-envelope"></i> info@ekko.ca</p>
+          <p><i class="fas fa-phone"></i> 647-609-0241</p>
+        </div>
+
+        <div class="footer-col newsletter">
+          <h4>Newsletter</h4>
+          <p>Signup our newsletter to get update information or insight.</p>
+          <form>
+            <input type="email" placeholder="Email" required />
+            <button type="submit">SIGN UP</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Ekko. All rights reserved by Bull’s Orbit</p>
+      </div>
+    </footer>
+  </body>
+</html>

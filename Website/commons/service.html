@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Navbar</title>
+    <!-- FontAwesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/serivces.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Top Navbar */
+      .top-navbar {
+        background-color: #1f3a93; /* navy blue */
+        color: white;
+        padding: 8px 20px;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        font-size: 14px;
+        padding-right: 64px;
+        height: 47px;
+      }
+
+      .top-navbar a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .contact-info {
+        display: flex;
+        align-items: center;
+      }
+
+      .top-navbar i {
+        margin-right: 8px;
+      }
+      /* Hero Section */
+      .hero {
+        position: relative;
+        height: 100vh;
+        background: url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a")
+          no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Navbar */
+      .navbar {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        position: absolute;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+
+      .navbar .logo {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .navbar .logo i {
+        font-size: 30px;
+        margin-right: 10px;
+      }
+
+      .navbar ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .navbar ul li {
+        position: relative;
+      }
+
+      .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+      .navbar ul li a {
+        border-right: 2px solid white;
+      }
+      .navbar ul li a:hover {
+        border-bottom: 2px solid white;
+        padding-bottom: 3px;
+      }
+
+      /* Dropdown */
+      .navbar ul li ul {
+        display: none;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.9);
+        list-style: none;
+        padding: 10px 0;
+        border-radius: 5px;
+      }
+
+      .navbar ul li:hover ul {
+        display: block;
+      }
+
+      .navbar ul li ul li {
+        padding: 8px 20px;
+      }
+
+      .navbar ul li ul li a {
+        color: #ddd;
+      }
+
+      .navbar ul li ul li a:hover {
+        color: white;
+      }
+
+      /* Hero Content */
+      .hero-content {
+        text-align: center;
+        color: white;
+        margin: auto;
+        max-width: 800px;
+      }
+
+      .hero-content h1 {
+        font-size: 60px;
+        font-weight: bold;
+      }
+
+      .hero-content p {
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      .services_middle_content {
+        margin-top: 80px;
+        text-align: center;
+        background-color: #fff;
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .services_middle_content .middle_content p {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 15px;
+        max-width: 900px; /* keeps text from stretching too wide */
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .services_middle_content .middle_content p strong {
+        font-size: 22px;
+        color: #000;
+      }
+
+      /* main */
+
+      .main {
+        background-color: #333;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+
+        border-radius: 34px;
+      }
+
+      .container {
+        margin: auto;
+        padding: 30px 20px;
+      }
+      .tabs {
+        background-color: #1f3a93;
+      }
+
+      .tabs ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0;
+        list-style: none;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .tabs ul li {
+        background-color: #1f3a93;
+        padding: 10px 18px;
+        border-radius: 6px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .section {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        margin-bottom: 60px;
+        background-color: #1a1a1a;
+        border-radius: 15px;
+        padding: 30px;
+        flex-wrap: wrap;
+      }
+
+      .section.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .section img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 15px;
+        border: 4px solid #3b82f6; /* blue accent */
+      }
+
+      .text {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .text h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+
+      .text p {
+        font-size: 16px;
+        color: #bbbbbb;
+        margin-bottom: 15px;
+      }
+
+      .text ul {
+        padding-left: 20px;
+        color: #dddddd;
+      }
+
+      .text ul li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .section {
+        display: flex;
+        background-color: #333;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        padding: 20px;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .section img {
+        max-width: 300px;
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .section .text {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .section h2 {
+        margin: 0;
+        font-size: 24px;
+        color: #f1f1f1;
+      }
+
+      .section p {
+        font-size: 16px;
+        color: #ffffff;
+      }
+
+      .section ul {
+        padding-left: 20px;
+      }
+
+      .section ul li {
+        margin-bottom: 10px;
+        color: white;
+      }
+      .footer {
+        background: linear-gradient(to right, #0e1e40, #1a1f54);
+        color: white;
+        padding: 40px 20px 10px;
+        font-family: Arial, sans-serif;
+        margin-top: 40px;
+      }
+
+      .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        gap: 30px;
+      }
+
+      .footer-col {
+        flex: 1 1 200px;
+        min-width: 220px;
+      }
+
+      .footer h3,
+      .footer h4 {
+        margin-bottom: 15px;
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer ul li a {
+        color: #ccc;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .footer ul li a:hover {
+        color: white;
+      }
+
+      .footer-col p {
+        margin-bottom: 10px;
+        color: #ccc;
+      }
+
+      .footer-col i {
+        color: #e74c3c;
+        margin-right: 8px;
+      }
+
+      .footer-col.newsletter input[type="email"] {
+        padding: 10px;
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 3px;
+      }
+
+      .footer-col.newsletter button {
+        padding: 10px 20px;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #4235b9;
+        text-align: center;
+        padding-top: 15px;
+        font-size: 14px;
+        color: #aaa;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- Top Navbar -->
+    <div class="top-navbar">
+      <div class="contact-info">
+        <a href="mailto:info@exa.com"
+          ><i class="fas fa-envelope"></i> info@exa.com</a
+        >
+        <a href="tel:6478090241"><i class="fas fa-phone"></i> 647-809-0241</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="logo"><i class="fas fa-shirt"></i> EXKO INC</div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li>
+            <a href="#">Services ▾</a>
+            <ul>
+              <li><a href="#">Design</a></li>
+              <li><a href="#">Production</a></li>
+              <li><a href="#">Delivery</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Products ▾</a>
+            <ul>
+              <li><a href="#">Shirts</a></li>
+              <li><a href="#">Jackets</a></li>
+              <li><a href="#">Hats</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <h1>SERVICES</h1>
+        <p>
+          From design to doorstep, we manage every stage of your apparel
+          production with precision, transparency, and care — so you can focus
+          on growing your brand.
+        </p>
+      </div>
+    </section>
+    <section class="services_middle_content">
+      <div class="middle_content">
+        <p>
+          <strong
+            >From initial product development to factory matchmaking, order
+            management, quality assurance, and global delivery</strong
+          >
+        </p>
+        <p>
+          We handle the complexities of apparel manufacturing so you don’t have
+          to. With trusted partners across Asia & dedicated teams on the ground,
+          we ensure your vision is executed with consistency, quality, and full
+          transparency.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="main">
+        <div class="container">
+          <div class="tabs">
+            <ul>
+              <li>Product Development</li>
+              <li>Factory Sourcing</li>
+              <li>Merchandising</li>
+              <li>Quality Control</li>
+              <li>Logistics & Shipping</li>
+            </ul>
+          </div>
+
+          <!-- Section 1 -->
+          <div class="section">
+            <div class="text">
+              <h2>Product Development</h2>
+              <p>Bringing Your Vision to Life</p>
+              <ul>
+                <li>Trend Forecasting – Stay ahead...</li>
+                <li>R&D / Fit Sampling – Accelerate time-to-market...</li>
+                <li>Tech Pack Creation – Communicate every detail...</li>
+              </ul>
+            </div>
+            <img src="../assets/card-1.webp" alt="Product Development" />
+          </div>
+
+          <!-- Section 2 -->
+          <div class="section">
+            <img src="../assets/card-2.png" alt="Factory Sourcing" />
+            <div class="text">
+              <h2>Factory Sourcing</h2>
+              <p>Access Trusted Manufacturing Partners</p>
+              <ul>
+                <li>
+                  Certiﬁed Factories – Factories in Pakistan, China &
+                  Bangladesh, thoroughly audited and proven.
+                </li>
+                <li>
+                  Ethical & Sustainable Production – With a focus on responsible
+                  practices and transparency..
+                </li>
+                <li>
+                  Product Type Expertise – Factories matched by strength...
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="section">
+            <div class="text">
+              <h2>Factory Sourcing</h2>
+              <p>Access Trusted Manufacturing Partners</p>
+              <ul>
+                <li>Certified factories – Pakistan, China, Bangladesh...</li>
+                <li>Global & Scalable Production...</li>
+                <li>
+                  Product Type Expertise – Factories matched by strength...
+                </li>
+              </ul>
+            </div>
+            <img src="../assets/card-2.png" alt="Factory Sourcing" />
+          </div>
+
+          <div class="section">
+            <img src="../assets/card-1.webp" alt="Factory Sourcing" />
+            <div class="text">
+              <h2>Factory Sourcing</h2>
+              <p>Access Trusted Manufacturing Partners</p>
+              <ul>
+                <li>Certified factories – Pakistan, China, Bangladesh...</li>
+                <li>Global & Scalable Production...</li>
+                <li>
+                  Product Type Expertise – Factories matched by strength...
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="section">
+            <div class="text">
+              <h2>Factory Sourcing</h2>
+              <p>Access Trusted Manufacturing Partners</p>
+              <ul>
+                <li>Certified factories – Pakistan, China, Bangladesh...</li>
+                <li>Global & Scalable Production...</li>
+                <li>
+                  Product Type Expertise – Factories matched by strength...
+                </li>
+              </ul>
+            </div>
+            <img src="../assets/card-1.webp" alt="Factory Sourcing" />
+          </div>
+          <!-- Repeat for each section -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Ekko</h3>
+          <p>
+            At Ekko, we specialize in high-quality gloves, safety gear kits,
+            sportswear, and bags designed for professionals who prioritize
+            protection, durability, and comfort.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Gloves</a></li>
+            <li><a href="#">Bags</a></li>
+            <li><a href="#">Safety Kits</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 45 Gill Cove, Cambridge, ON,
+            N3E 1A1, CANADA
+          </p>
+          <p><i class="fas fa-envelope"></i> info@ekko.ca</p>
+          <p><i class="fas fa-phone"></i> 647-609-0241</p>
+        </div>
+
+        <div class="footer-col newsletter">
+          <h4>Newsletter</h4>
+          <p>Signup our newsletter to get update information or insight.</p>
+          <form>
+            <input type="email" placeholder="Email" required />
+            <button type="submit">SIGN UP</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2025 Ekko. All rights reserved by Bull’s Orbit</p>
+      </div>
+    </footer>
+  </body>
+</html>
